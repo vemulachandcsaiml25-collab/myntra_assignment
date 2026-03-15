@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myntra | Fashion Redefined</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; transition:all 0.4s ease; }
+:root { --m: #ff3f6c; --b: #282c3f; --g: #94969f; --bg: #ffffff; }
+body { background: #fff; color: var(--b); }
+header { position:fixed; top:0; width:100%; height:85px; background:rgba(255,255,255,0.95); display:flex; align-items:center; justify-content:space-between; padding:0 4%; z-index:1000; box-shadow:0 4px 20px rgba(0,0,0,0.06); border-bottom:1px solid #f5f5f6; }
+.logo-box { display:flex; align-items:center; text-decoration:none; }
+.logo-box img { height:45px; }
+nav { display:flex; gap:30px; margin-left:40px; }
+nav a { text-decoration:none; color:var(--b); font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:0.5px; padding:32px 0; border-bottom:4px solid transparent; }
+nav a:hover { border-bottom-color:var(--m); color:var(--m); }
+.search-bar { background:#f5f5f6; border:1px solid #f5f5f6; width:35%; height:45px; display:flex; align-items:center; padding:0 15px; border-radius:8px; }
+.search-bar:focus-within { background:#fff; border-color:#eaeaec; }
+.search-bar input { background:none; border:none; outline:none; width:100%; margin-left:12px; font-size:14px; color:#696e79; }
+.user-menu { display:flex; gap:30px; align-items:center; }
+.menu-item { text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; }
+.menu-item i { font-size:20px; color:var(--b); margin-bottom:4px; }
+.menu-item span { font-size:12px; font-weight:700; color:var(--b); }
+.menu-item:hover i, .menu-item:hover span { color:var(--m); }
+.hero-sec { margin-top:85px; padding:30px 4%; }
+.banner { width:100%; height:400px; background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('images/banner.png'); background-size:cover; background-position:center; border-radius:15px; display:flex; align-items:center; padding-left:60px; color:#fff; }
+.banner h1 { font-size:55px; font-weight:900; line-height:1; }
+.banner p { font-size:22px; margin:15px 0 30px; }
+.shop-now { background:var(--m); color:#fff; padding:15px 40px; text-decoration:none; border-radius:4px; font-weight:700; font-size:18px; }
+.shop-now:hover { background:#e63960; transform:scale(1.05); }
+.cat-sec { padding:40px 4%; }
+.cat-sec h2 { font-size:28px; font-weight:800; text-transform:uppercase; margin-bottom:35px; color:#3e4152; letter-spacing:2px; text-align:center; }
+.cat-grid { display:grid; grid-template-columns:repeat(5, 1fr); gap:20px; }
+.cat-card { border:1px solid #f5f5f6; border-radius:12px; overflow:hidden; position:relative; cursor:pointer; }
+.cat-card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.1); }
+.cat-card img { width:100%; height:320px; object-fit:cover; }
+.cat-info { padding:15px; text-align:center; background:#fff; }
+.cat-info h3 { font-size:16px; color:#282c3f; }
+.cat-info p { font-size:13px; color:var(--m); font-weight:700; margin-top:5px; }
+footer { background:#fafbfc; border-top:1px solid #eaeaec; padding:60px 4% 30px; margin-top:50px; }
+.footer-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:40px; margin-bottom:50px; }
+.footer-col h4 { color:#282c3f; font-size:14px; text-transform:uppercase; margin-bottom:25px; font-weight:700; }
+.footer-col ul { list-style:none; }
+.footer-col li { margin-bottom:10px; }
+.footer-col a { color:#696b79; text-decoration:none; font-size:15px; }
+.footer-col a:hover { color:#282c3f; font-weight:700; }
+.bottom-bar { border-top:1px solid #eaeaec; padding-top:25px; display:flex; justify-content:space-between; align-items:center; }
+.bottom-bar p { font-size:14px; color:#94969f; }
+.socials i { font-size:22px; color:#696b79; margin-left:20px; cursor:pointer; }
+.socials i:hover { color:var(--m); }
+@media (max-width: 1024px) { nav, .search-bar { display:none; } .cat-grid { grid-template-columns:repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<header>
+<div style="display:flex; align-items:center">
+<a href="#" class="logo-box"><img src="logo.png" alt="Myntra"></a>
+<nav><a href="#">Men</a><a href="#">Women</a><a href="#">Kids</a><a href="#">Home</a><a href="#">Beauty</a></nav>
+</div>
+<div class="search-bar"><i class="fa fa-search" style="color:#696e79"></i><input type="text" placeholder="Search for products, brands and more"></div>
+<div class="user-menu">
+<div class="menu-item"><i class="fa-regular fa-user"></i><span>Profile</span></div>
+<div class="menu-item"><i class="fa-regular fa-heart"></i><span>Wishlist</span></div>
+<div class="menu-item"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span></div>
+</div>
+</header>
+<main>
+<section class="hero-sec">
+<div class="banner">
+<div><h1>FLAT 50% OFF</h1><p>On the season's most loved styles</p><a href="#" class="shop-now">EXPLORE NOW</a></div>
+</div>
+</section>
+<section class="cat-sec">
+<h2>Shop by Category</h2>
+<div class="cat-grid">
+<div class="cat-card"><img src="images/casual.png" alt="Casual"><div class="cat-info"><h3>Casual Wear</h3><p>Min. 40% Off</p></div></div>
+<div class="cat-card"><img src="images/ethnic.png" alt="Ethnic"><div class="cat-info"><h3>Ethnic Wear</h3><p>Up to 60% Off</p></div></div>
+<div class="cat-card"><img src="images/footwear.png" alt="Footwear"><div class="cat-info"><h3>Footwear</h3><p>Flat 30% Off</p></div></div>
+<div class="cat-card"><img src="images/active.png" alt="Active"><div class="cat-info"><h3>Active Wear</h3><p>Min. 50% Off</p></div></div>
+<div class="cat-card"><img src="images/watches.png" alt="Watches"><div class="cat-info"><h3>Watches</h3><p>Top Brands</p></div></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-row">
+<div class="footer-col"><h4>Online Shopping</h4><ul><li><a href="#">Men</a></li><li><a href="#">Women</a></li><li><a href="#">Kids</a></li><li><a href="#">Myntra Insider</a></li></ul></div>
+<div class="footer-col"><h4>Customer Policies</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">FAQ</a></li><li><a href="#">T&C</a></li><li><a href="#">Returns</a></li></ul></div>
+<div class="footer-col"><h4>Experience App</h4><div style="display:flex; gap:10px; margin-top:15px"><img src="https://constant.prefix.com/google_play.png" height="40" alt="Play Store" style="background:#000; padding:5px; border-radius:5px"></div></div>
+<div class="footer-col"><h4>Useful Links</h4><ul><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li><li><a href="#">Site Map</a></li><li><a href="#">Corporate Information</a></li></ul></div>
+</div>
+<div class="bottom-bar"><p>&copy; 2026 www.myntra.com. All rights reserved.</p><div class="socials"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i></div></div>
+</footer>
+</body>
+</html>
